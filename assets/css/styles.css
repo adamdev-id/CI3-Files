@@ -1,0 +1,529 @@
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #FF0000;
+}
+
+.inline {
+  display:inline-block;
+  margin-right:5px;
+}
+
+.background {
+    background-image: url('https://pbs.twimg.com/media/ETI0_59U8AAeUgn.jpg');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    overflow: hidden;
+}
+
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+table caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+}
+
+table tr {
+  background-color: #f8f8f8;
+  /* border: 1px solid #ddd; */
+  padding: .35em;
+}
+
+table th,
+table td {
+  padding: .625em;
+  text-align: center;
+}
+
+table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.avatar {
+  width: 15%;
+}
+
+.question {
+  width: 100%;
+}
+
+@media screen and (max-width: 600px) 
+{
+  .avatar {
+    width: 100%;
+  }
+
+  .question {
+    width: 100%;
+  }
+
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+  
+  table thead {
+    border: none;
+    /* clip: rect(0 0 0 0); */
+    height: 1px;
+    margin: -1px;
+    /* overflow: hidden; */
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  
+  table tr {
+    /* border-bottom: 3px solid #ddd; */
+    display: block;
+    margin-bottom: .625em;
+  }
+  
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+  
+  table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+
+.bgcolor {
+  background-color: #8fd6e1;
+  opacity: 20%;
+}
+
+.backdrop {
+  font-family: 'Josefin Sans', sans-serif;
+  background-image: url('https://cdn.discordapp.com/attachments/738082506053779468/838426728346026037/ETI0_59U8AAeUgn.png');
+  
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: right;
+  overflow: hidden;
+
+  /* position: absolute; */
+  width: 100%;
+  
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+.blur {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    height: 100vh;
+    width: 50%;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+h1 {
+    color: #f5c0c0;
+    font-family: fantasy;
+}
+
+.jumbotron {
+  margin-top: 1%;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: white;
+}
+
+.mainbgprofile {
+  background-image: url('https://cdn.discordapp.com/attachments/420913107867664384/960308676395151370/doctor2.png');
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: right;
+  overflow: hidden;
+  width: 100%;
+  
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.mainbgindex {
+  background-image: url('https://cdn.discordapp.com/attachments/420913107867664384/960301311117635654/doctor1.png');
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: right;
+  overflow: hidden;
+
+  /* position: absolute; */
+  width: 100%;
+  
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+html, body {
+    /*background-color: #b67171;*/
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: "Roboto", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* html, body {margin: 0; height: 100%; } */
+
+.textLogin {
+  color: inherit; 
+}
+
+.textLogin:hover {
+  color: grey;
+}
+
+/* input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+} */
+
+.middle {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-page {
+  width: 770px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+
+/*form {
+    zoom: 0.9;
+    -moz-transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+}*/
+
+.form {
+  zoom: 0.9;
+  -moz-transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+
+  margin-top: -40px;
+  background: #FFFFFF;
+  padding: 45px;
+  text-align: left;
+  width: 430px;
+  margin-block-end: 30px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  /* border-radius: 3%; */
+  border-radius: 15px 15px 15px 15px;
+  /*
+  
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 770px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: left;
+  margin-block-end: 30px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  */
+}
+
+.formcheckout {
+  zoom: 0.9;
+  -moz-transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+
+  margin-top: -8px;
+  background: #FFFFFF;
+  padding: 45px;
+  text-align: left;
+  margin-block-end: 30px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+form .input:hover {
+  color: white;
+  background-color: rgb(98, 197, 122);
+  transition: 0.3s;
+}
+
+form .input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  color: grey;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+form select {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  color: grey;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+form select:hover {
+  color: white;
+  background-color: rgb(98, 197, 122);
+  transition: 0.3s;
+}
+
+.form textarea {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.form p {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 5px;
+  box-sizing: border-box;
+  font-size: 14px;
+  text-align: left;
+}
+
+.buttonform:hover {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: white;
+  background-color: rgb(98, 197, 122);
+  font-size: 14px;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  margin-block-start: 20px;
+  font-weight: 300; 
+  border-radius: 3;
+  transition: 0.3s;
+}
+
+.buttonform {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: green;
+  font-size: 14px;
+  transition: 0.3s;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  margin-block-start: 20px;
+  font-weight: 300; 
+  border-radius: 3px;
+}
+
+form .button:hover {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: white;
+  background-color: rgb(98, 197, 122);
+  font-size: 14px;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  margin-block-start: 20px;
+  font-weight: 300; 
+  border-radius: 3;
+  transition: 0.3s;
+}
+
+form .button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: green;
+  font-size: 14px;
+  transition: 0.3s;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  margin-block-start: 20px;
+  font-weight: 300; 
+  border-radius: 3px;
+}
+
+.centered-content {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.button-content {
+    background-color: #4b778d;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.button-content:hover {
+    background-color: #71f1b6;
+}
+
+
+.opacity {
+    opacity: 80%;
+}
+
+.centered-color {
+    background-color: #4b778d;
+    background-blend-mode: soft-light;
+    margin-top: 5%;
+    margin-bottom: auto;
+    margin-right: auto;
+    margin-left: auto;
+    width: 60%;
+    height: 80%;
+}
+
+.centered-wrapper {
+    margin-top: -16%;
+    zoom: 0.65;
+    -moz-transform: scale(0.65);
+    -webkit-transform: scale(0.65);
+    transform: scale(0.65);
+}
+  
+.centered-wrapper:before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    position: relative;
+    vertical-align: middle;
+    width: 0;
+}
+
+.but {
+  line-height: 1;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 5px 25px;
+  background-color: #2fa779;
+  border-color: #000000;
+  -webkit-transition: color .6s ease, background-color .6s ease;
+  transition: color .6s ease, background-color .6s ease;
+}
+
+.but:hover,
+.but:focus {
+  background-color: #78ddb3;
+  color: rgb(74, 121, 86);
+}
+
+.but:hover,
+.but:focus,
+.but:active,
+.but:focus:active,
+.but.focus {
+  outline: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+@-webkit-keyframes logo {
+	0% {
+		-webkit-transform: scale(1);
+		        transform: scale(1);
+	}
+	50% {
+		-webkit-transform: scale(1.07);
+		        transform: scale(1.07);
+	}
+	100% {
+		-webkit-transform: scale(1);
+		        transform: scale(1);
+	}
+}
+
+@keyframes logo {
+	0% {
+		-webkit-transform: scale(1);
+		        transform: scale(1);
+	}
+	50% {
+		-webkit-transform: scale(1.07);
+		        transform: scale(1.07);
+	}
+	100% {
+		-webkit-transform: scale(1);
+		        transform: scale(1);
+	}
+}
